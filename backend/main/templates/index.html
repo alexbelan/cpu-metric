@@ -14,9 +14,9 @@
     </div>
 
     <table id="table">
-        <tr><th>IP</th><th>Нагрузка %</th><th>Время</th></tr>
+        <tr><th>Нагрузка %</th><th>Время</th></tr>
         {% for data in cpu_metrics %}
-            <tr><td>{{ data.ip }}</td><td>{{ data.data }}</td><td>{{ data.date|date:"m.d H:i:s" }}</td></tr>
+            <tr><td>{{ data.data }}</td><td>{{ data.date|date:"m.d H:i:s" }}</td></tr>
         {% endfor %}
     </table>
     <script type="text/javascript" src="{% static 'script.js' %}"></script>

@@ -34,7 +34,6 @@ class CreateCPUMetricView(ListModelMixin, CreateModelMixin, GenericAPIView):
         if serializer.is_valid():
             serializer.save()
             data = {
-                'ip': serializer.data.get('ip'),
                 'data': serializer.data.get('data'),
             }
             return Response(data, status=status.HTTP_200_OK)

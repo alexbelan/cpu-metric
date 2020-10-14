@@ -6,11 +6,10 @@ class CPUMetricSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CPUMetric
-        fields = ['ip', 'data', 'date']
+        fields = ['data', 'date']
 
     def save(self, *args, **kwargs):
         cpu_data = CPUMetric(
-            ip=self.validated_data['ip'],
             data=self.validated_data['data'],
         )
         cpu_data.save()
