@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Содержимое</title>
+    {% load static %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="sorting">
+        Сортировка:
+        <button class="btn-sort-performance">Нагрузка <span>&and;</span></button>
+    </div>
+
+    <table id="table">
+        <tr><th>IP</th><th>Нагрузка %</th><th>Время</th></tr>
+        {% for data in cpu_metrics %}
+            <tr><td>{{ data.ip }}</td><td>{{ data.data }}</td><td>{{ data.date|date:"m.d H:i:s" }}</td></tr>
+        {% endfor %}
+    </table>
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+</body>
+</html>

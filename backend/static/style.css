@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: auto;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(255, 247, 233);
+}
+
+td, th {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+table, td, th {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sorting {
+    background-color: rgb(255, 247, 233);
+    padding: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sorting button {
+    background-color: wheat;
+    border: solid 1px black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    outline:none;
+}
+
+.sorting button:active {
+    background-color: rgb(240, 200, 126);
+}
